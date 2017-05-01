@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post
+from .models import Posts
 
 class PostModelAdmin(admin.ModelAdmin):
 	list_display = ("title", "updated", "timestamp")
@@ -9,6 +9,6 @@ class PostModelAdmin(admin.ModelAdmin):
 	list_filter = ("updated", "timestamp")
 
 	class Meta:
-		model = Post
+		model = Posts
 
-admin.site.register(Post, PostModelAdmin)
+admin.site.register(Posts, PostModelAdmin)
