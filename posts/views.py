@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Post
+from .models import Posts
 
 # Create your views here.
 def post_list(request):
-    queryset = Post.objects.all()
+    queryset = Posts.objects.all()
     context = {
         "object_list": queryset,
         "title": "Статьи",
@@ -13,7 +13,7 @@ def post_list(request):
 
 
 def post_detail(request, id=None):
-    instance = get_object_or_404(Post, id=id)
+    instance = get_object_or_404(Posts, id=id)
     context = {
         "object": instance,
         "title": instance.title,
