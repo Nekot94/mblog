@@ -5,7 +5,7 @@
     <h2>{{ title }}</h2>
 
 
-    <div class="">
+    <article>
             {% if object.image %}
                         <img src="{{ object.image.url }}" class="img-responsive">
             {% endif %}
@@ -14,7 +14,6 @@
                     <small>{{ object.timestamp }}</small>
                 </h3>
                 <p>{{ object.content }}</p>
-        </div>
-    </div>
+    </article>
 
 {% endblock %}

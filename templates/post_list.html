@@ -5,16 +5,15 @@
     <h2>{{ title }}</h2>
 
     {% for object in object_list %}
-        <div class="">
+        <article>
                 {% if object.image %}
-                            <img src="{{ object.image.url }}" class="img-responsive">
+                            <img class="right" src="{{ object.image.url }}" class="img-responsive">
                 {% endif %}
                     <h3>
                         <a href='{{ object.get_absolute_url }}'>{{ object.title }}</a>
                         <small>{{ object.timestamp|timesince }}</small>
                     </h3>
                     <p>{{ object.content|linebreaks|truncatechars:120 }}</p>
-            </div>
-        </div>
+        </article>
     {% endfor %}
 {% endblock %}

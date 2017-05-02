@@ -4,13 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block head_title %} Мегаблок {% endblock head_title %}</title>
-    <link rel="stylesheet"  href="{% static 'posts/css/main.css'%}"">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Lora|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet"  href="{% static 'posts/css/main.css'%}""> 
+    <!-- <link rel="stylesheet"  href="/static/posts/css/main.css""> -->
 </head>
 <body>
     <div class="container">
+
+        <header>
+            <h1>Мегабложик</h1>
+        </header>
+
         {% block content %}
         
         {% endblock content %}
+
+        <footer>
+            <p>Мегабложик 2017 &copy;</p>
+        </footer>
     </div>
 </body>
 </html>
